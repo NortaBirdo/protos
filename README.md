@@ -11,11 +11,12 @@ For achievement test result of work I highly recommend to use Git.
 ## Steps
 1. To be sure what you have NodeJS
 1. Download this repository
+1. Type in command line: npm install
 1. Delete forlder "examples" or add one to .gitignore file
 
 ## How To Create Mockups
 1. Copy and rename index.html file (It will be your mockups)
-1. type in command line: npm run gulp
+1. Type in command line: npm run gulp
 1. Make mockup use HTML and CSS. The gulp outomaticaly rebuild files for each saves and put in in build folder.
 
 # Changes
