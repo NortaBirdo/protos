@@ -16,11 +16,11 @@ For achievement test result of work I highly recommend to use Git.
 ## How To Create Mockups
 1. Copy and rename index.html file (It will be your mockups)
 1. type in command line: npm run gulp
-1. Make mockup use HTML and CSS. The gulp outomaticaly rebuild files for each saves and put in in build folder. 
+1. Make mockup use HTML and CSS. The gulp outomaticaly rebuild files for each saves and put in in build folder.
 
 # Changes
 13/03/2017
 1. Rigger was replaced by ejs
 
 # Plans
-I'm working on template of components and thier CSS. Also I will make more details abbout structure of project and I will create special script for makeing new file for template
+I'm working on template of components and their CSS. Also I will make more details about structure of project and I will create special script for making new file for template
