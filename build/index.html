@@ -4,11 +4,20 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="./css/protos.css">
     <title><!--Here should be your caption --></title>
+
+    <script type="text/javascript">
+    var setdata = function (data) {
+      var name_of_mockups = document.getElementById('name_of_mockup');
+      name_of_mockups.innerHTML = data.name_of_mockup;
+      var comment = document.getElementById('comment');
+      comment.innerHTML = data.comment;
+      }
+    </script>
+
   </head>
   <body>
     <div class="wrapper">
-      <div class="mockup-name">
-        <!-- here should be a name of your maockup-->
+      <div class="mockup-name" id="name_of_mockup">
 
       </div>
 <div class="mockup">
@@ -16,29 +25,38 @@
 </div>
 
 <div class="technical-notes">
+  <div class="comment" id="comment">
 
-  <div class="comment">
-    <!-- Some comment will be here -->
   </div>
 
-      <div class="legend">
-        <span>LEGEND</span>
+  <div class="legend">
+    <span>LEGEND</span>
 
-        <div class="new">
-          Новый элемент
-        </div>
+    <div class="new">
+      Новый элемент
+    </div>
 
-        <div class="changed">
-          Измененный элемент
-        </div>
+    <div class="changed">
+      Измененный элемент
+    </div>
 
-        <div class="deleted">
-          Удаленный элемент
-        </div>
-      </div>
-    </div> <!-- end of technical-notes-->
+    <div class="deleted">
+      Удаленный элемент
+    </div>
+  </div>
+</div> <!-- end of technical-notes-->
 
-  </div> <!-- end of wrapper-->
+</div> <!-- end of wrapper-->
 
 </body>
 </html>
+
+<script type="text/javascript">
+  var data = {
+    name_of_mockup: '',  //Change the name of mockups
+    comment: `` //Change the comment or stay empty
+  }
+
+  setdata(data);
+
+</script>

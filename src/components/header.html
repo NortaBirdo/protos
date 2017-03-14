@@ -4,10 +4,19 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="./css/protos.css">
     <title><!--Here should be your caption --></title>
+
+    <script type="text/javascript">
+    var setdata = function (data) {
+      var name_of_mockups = document.getElementById('name_of_mockup');
+      name_of_mockups.innerHTML = data.name_of_mockup;
+      var comment = document.getElementById('comment');
+      comment.innerHTML = data.comment;
+      }
+    </script>
+
   </head>
   <body>
     <div class="wrapper">
-      <div class="mockup-name">
-        <!-- here should be a name of your maockup-->
+      <div class="mockup-name" id="name_of_mockup">
 
       </div>
