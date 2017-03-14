@@ -3,6 +3,8 @@
 var gulp = require('gulp');
 var rigger = require('gulp-rigger');
 var watch = require('gulp-watch');
+var ejs = require('gulp-ejs');
+
 
 gulp.task('html', function () {
     gulp.src('./src/*.html')
@@ -20,11 +22,18 @@ gulp.task('img', function () {
         .pipe(gulp.dest('./build/img'))
 });
 
-gulp.task('html-example', function () {
+
+gulp.task('html-example', function() {
+  gulp.src('./src/*.ejs')
+    .pipe(ejs())
+    .pipe(gulp.dest('./build/'))
+});
+
+/*gulp.task('html-example', function () {
     gulp.src('./examples/*.html')
         .pipe(rigger())
         .pipe(gulp.dest('./build-examples/'))
-});
+});*/
 
 gulp.task('css-example', function () {
     gulp.src('./examples/css/*.css')

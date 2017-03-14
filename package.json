@@ -31,5 +31,8 @@
     "gulp": "^3.9.1",
     "gulp-rigger": "^0.5.8",
     "gulp-watch": "^4.3.11"
+  },
+  "devDependencies": {
+    "gulp-ejs": "^3.0.0"
   }
 }
