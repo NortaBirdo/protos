@@ -116,6 +116,18 @@ body {
   border-bottom: 1px solid black;
 }
 
+/*for tables*/
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid black;
+  padding: 2px;
+}
+
+
 /*States will use for JS-script later.
 
 .states {
