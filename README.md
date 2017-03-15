@@ -16,7 +16,7 @@ For achievement test result of work I highly recommend to use Git.
 
 ## How To Create The Mockup
 1. Type into command line: ```npm run gulp```
-1. Type into command line: ```npm run filename``` Where the filename is a name of your file with mockup (name is typed without ```.html```)
+1. Type into command line: ```npm run new filename``` Where the filename is a name of your file with mockup (name is typed without ```.html```)
 1. Change ``` name_of_mockup``` variable in ```data``` json to name of your mockup
 1. Change ``` comment``` variable in ```data``` structure to real comment or stay empty
 1. Make mockup use HTML and CSS. The gulp automatically rebuild files for each saves and put in in build folder under the same name.
