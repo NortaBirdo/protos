@@ -5,13 +5,16 @@ var path = {
     html: './examples/*.html',
     css: './examples/css/*.css',
     img: './examples/img/*.*',
-    js: './src/js/*.*'
+    js: './examples/js/*.*'
   },
   src: {
     html: './src/*.html',
     css: './src/css/*.css',
     img: './src/img/*.*',
     js: './src/js/*.*'
+  },
+  protos: {
+    css: './css/*.css'
   }
 }
 
@@ -61,6 +64,17 @@ gulp.task('js-example', function () {
         .pipe(gulp.dest('./build-examples/js'))
 });
 
+gulp.task('protos', function () {
+    gulp.src(path.protos.css)
+        .pipe(gulp.dest('./build/css'))
+});
+
+gulp.task('protos-example', function () {
+    gulp.src(path.protos.css)
+        .pipe(gulp.dest('./examples/css'))
+});
+
+
 gulp.task('watch', function() {
   watch('./src/**/*.html', function(event, cb) {
     gulp.start('html');
@@ -71,15 +85,25 @@ gulp.task('watch', function() {
   watch('./src/img/*.*', function(event, cb) {
     gulp.start('img');
   });
+  watch('./src/js/*.*', function(event, cb) {
+    gulp.start('js');
+  });
   watch('./examples/**/*.html', function(event, cb) {
     gulp.start('html-example');
   });
-  watch('./src/examples/*.css', function(event, cb) {
+  watch('./examples/*.css', function(event, cb) {
     gulp.start('css-example');
   });
-  watch('./src/examples/*.*', function(event, cb) {
+  watch('./examples/img/*.*', function(event, cb) {
     gulp.start('img-example');
+  });
+  watch('./examples/js/*.*', function(event, cb) {
+    gulp.start('js-example');
+  });
+  watch('./css/*.css', function(event, cb) {
+    gulp.start('protos');
+    gulp.start('protos-example');
   });
 });
 
-gulp.task('default', ['watch', 'html', 'css', 'js', 'img', 'html-example', 'css-example', 'img-example', 'js-example']);
+gulp.task('default', ['watch', 'html', 'css', 'js', 'img', 'html-example', 'css-example', 'img-example', 'js-example', 'protos']);

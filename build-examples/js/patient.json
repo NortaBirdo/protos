@@ -1,0 +1,16 @@
+{
+  "patient": {
+    "id-1": {
+      "family": "Smith",
+      "name": "John",
+      "birthday": "12 Dec 1975",
+      "isHVI" : "true",
+    },
+    "id-1": {
+      "family": "Smith",
+      "name": "Sarah",
+      "birthday": "02 Feb 1978",
+      "isHVI" : "false",
+    }
+  }
+}
