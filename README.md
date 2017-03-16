@@ -21,9 +21,5 @@ For achievement test result of work I highly recommend to use Git.
 1. Change ``` comment``` variable in ```data``` structure to real comment or stay empty
 1. Make mockup use HTML and CSS. The gulp automatically rebuild files for each saves and put in in build folder under the same name.
 
-# Changes
-13/03/2017
-1. Rigger was replaced by ejs
-
 # Plans
-I'm working on template of components and their CSS. Also I will make more details about structure of project and I will create special script for making new file for template
+I'm working on template of components and their CSS. Also I will make more details about structure of project
