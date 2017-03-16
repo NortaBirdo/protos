@@ -3,12 +3,12 @@
 var fs = require('fs');
 var path = "./src/" + process.argv[2] + ".html";
 var template =`
-//= ./components/header.html
+//= ../components/header.html
 <div class="mockup">
 
 </div>
 
-//= ./components/footer.html
+//= ../components/footer.html
 
 <script type="text/javascript">
   var data = {
