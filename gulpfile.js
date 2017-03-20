@@ -47,8 +47,6 @@ var watch = require('gulp-watch');
 gulp.task('protos', function () {
     gulp.src(path.from.protos.css)
         .pipe(gulp.dest(path.dest.protos_build.css))
-  /*  gulp.src('./css/*.css')
-        .pipe(gulp.dest('./src/css'))*/
 });
 
 gulp.task('protos-example', function () {
