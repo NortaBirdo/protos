@@ -20,7 +20,7 @@ var path = {
   },
   dest: {
     protos_build: {
-      css: './build/css'
+      css: './src/css'
     },
     protos_examples: {
       css: './examples/css'
@@ -37,13 +37,24 @@ var path = {
       img: './build-examples/img',
       js:'./build-examples/js'
     },
-
   }
 }
 
 var gulp = require('gulp');
 var rigger = require('gulp-rigger');
 var watch = require('gulp-watch');
+
+gulp.task('protos', function () {
+    gulp.src(path.from.protos.css)
+        .pipe(gulp.dest(path.dest.protos_build.css))
+  /*  gulp.src('./css/*.css')
+        .pipe(gulp.dest('./src/css'))*/
+});
+
+gulp.task('protos-example', function () {
+    gulp.src(path.from.protos.css)
+        .pipe(gulp.dest(path.dest.protos_examples.css))
+});
 
 gulp.task('html', function () {
     gulp.src(path.from.src.html)
@@ -87,17 +98,13 @@ gulp.task('js-example', function () {
         .pipe(gulp.dest(path.from.examples.js))
 });
 
-gulp.task('protos', function () {
-    gulp.src(path.from.protos.css)
-        .pipe(gulp.dest(path.dest.examples.protos_build.css))
-});
-
-gulp.task('protos-example', function () {
-    gulp.src(path.from.protos.css)
-        .pipe(gulp.dest(path.dest.examples.protos_examples.css))
-});
-
 gulp.task('watch', function() {
+  watch('./css/*.css', function(event, cb) {
+    gulp.start('protos');
+  });
+  watch('./css/*.css', function(event, cb) {
+    gulp.start('protos-example');
+  });
   watch('./src/**/*.html', function(event, cb) {
     gulp.start('html');
   });
@@ -122,12 +129,6 @@ gulp.task('watch', function() {
   watch('./examples/js/*.*', function(event, cb) {
     gulp.start('js-example');
   });
-  watch('./css/*.css', function(event, cb) {
-    gulp.start('protos');
-  });
-  watch('./css/*.css', function(event, cb) {
-    gulp.start('protos-example');
-  });
 });
 
-gulp.task('default', ['watch', 'html', 'css', 'js', 'img', 'html-example', 'css-example', 'img-example', 'js-example', 'protos', 'protos-example']);
+gulp.task('default', ['watch', 'protos', 'protos-example', 'html', 'css', 'js', 'img', 'html-example', 'css-example', 'img-example', 'js-example',]);
