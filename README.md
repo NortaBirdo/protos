@@ -6,7 +6,7 @@ This is light-weight html-css framework for quick prototyping UI by analysts
 You need the NodeJS for work with templates. You can download it from [official webpage](https://nodejs.org/en/)
 
 ## Recomendations
-For achievement test result of work I highly recommend to use Git.
+For achievement the best result of work I highly recommend to use Git.
 
 ## Steps
 1. To be sure what you have NodeJS
