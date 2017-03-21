@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/protos.css">
+    <title><!--Here should be your caption --></title>
+
+    <script type="text/javascript">
+    var setdata = function (data) {
+      var name_of_mockups = document.getElementById('name_of_mockup');
+      name_of_mockups.innerHTML = data.name_of_mockup;
+      var comment = document.getElementById('comment');
+      comment.innerHTML = data.comment;
+      }
+
+      var load_data = function (name, id) {
+
+      }
+    </script>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="mockup-name" id="name_of_mockup">
+
+      </div>
+<div class="mockup">
+
+  <div class="window">
+    <div class="window-header">
+      Card of Patient
+    </div>
+    <div class="window-content">
+
+      <div class="multi-col-form">
+
+        <div class="column">
+          <div class="row">
+            <div class="label">
+              Family
+            </div>
+            <div class="input" id="family">
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="label">
+              Name
+            </div>
+            <div class="input" id="name">
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="label">
+              Birth Date
+
+            </div>
+            <div class="input" id="birthday">
+
+            </div>
+          </div>
+        </div> <!-- end of column-->
+
+        <div class="column">
+          <div class="row">
+            <div class="label">
+              Has HIV
+            </div>
+            <div class="input" id="isHVI">
+
+            </div>
+
+          </div>
+
+        </div> <!-- end of column-->
+
+      </div>
+
+    </div>
+  </div> <!-- end of window-->
+
+
+</div>
+
+<div class="technical-notes">
+  <div class="comment" id="comment">
+
+  </div>
+
+  <div class="legend">
+    <span>LEGEND</span>
+
+    <div class="new">
+      Новый элемент
+    </div>
+
+    <div class="changed">
+      Измененный элемент
+    </div>
+
+    <div class="deleted">
+      Удаленный элемент
+    </div>
+  </div>
+</div> <!-- end of technical-notes-->
+
+</div> <!-- end of wrapper-->
+
+</body>
+</html>
+
+<script type="text/javascript">
+  var data = {
+    name_of_mockup: '',  //Change the name of mockups
+    comment: `` //Change the comment or stay empty
+  }
+
+  setdata(data);
+
+</script>
