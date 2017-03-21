@@ -15,7 +15,7 @@ var path = {
       html: './examples/*.html',
       css: './examples/css/*.css',
       img: './examples/img/*.*',
-      js: './npm /js/*.*'
+      js: './examples/js/*.*'
     }
   },
   dest: {
@@ -93,7 +93,7 @@ gulp.task('img-example', function () {
 
 gulp.task('js-example', function () {
     gulp.src(path.from.examples.js)
-        .pipe(gulp.dest(path.from.examples.js))
+        .pipe(gulp.dest(path.dest.examples.js))
 });
 
 gulp.task('watch', function() {
@@ -118,7 +118,7 @@ gulp.task('watch', function() {
   watch('./examples/**/*.html', function(event, cb) {
     gulp.start('html-example');
   });
-  watch('./examples/*.css', function(event, cb) {
+  watch('./examples/css/*.css', function(event, cb) {
     gulp.start('css-example');
   });
   watch('./examples/img/*.*', function(event, cb) {
