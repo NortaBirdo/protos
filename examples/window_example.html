@@ -1,0 +1,60 @@
+
+//= ../components/header.html
+<div class="mockup">
+
+  <div class="window">
+    <div class="window-header">
+      List of Patient with HIV
+    </div>
+    <div class="window-content">
+      <div class="control-panel">
+        <button type="button" name="button">Refresh</button>
+        <button type="button" name="button">Delete</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>ID</th>
+            <th>Family</th>
+            <th>Name</th>
+            <th>Birthday</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>1234</td>
+            <td id="family"></td>
+            <td id="name"></td>
+            <td id="birthday"></td>
+            <td>
+              <select>
+              <option>Delete</option>
+              <option>Edit</option>
+            </select></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+
+</div>
+
+//= ../components/footer.html
+
+<script type="text/javascript" src="./js/patient.js">
+
+</script>
+
+<script type="text/javascript">
+  set_mockup_name('Mockup of list of patients with HIV');//Change the name of mockups
+  set_mockup_comment(`
+
+    `)//Change the comment or stay empty
+
+  load_data(patient);
+</script>
