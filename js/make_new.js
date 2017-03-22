@@ -17,6 +17,7 @@ var template =`
     \`)//Change the comment or stay empty
 
   // if your want to link fake data put call of load_data(object_name) here.
+</script>
 `;
 
 if (!fs.existsSync(path)) {
