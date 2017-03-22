@@ -11,14 +11,10 @@ var template =`
 //= ../components/footer.html
 
 <script type="text/javascript">
-  var data = {
-    name_of_mockup: \'\',  //Change the name of mockups
-    comment: \`\` //Change the comment or stay empty
-  }
+  set_mockup_name(\'\');//Change the name of mockups
+  set_mockup_comment(\`
 
-  setdata(data);
-
-</script>
+    \`)//Change the comment or stay empty
 `;
 
 if (!fs.existsSync(path)) {

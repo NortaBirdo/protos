@@ -6,15 +6,18 @@
     <title><!--Here should be your caption --></title>
 
     <script type="text/javascript">
-    var setdata = function (data) {
+    var set_mockup_name = function (name) {
       var name_of_mockups = document.getElementById('name_of_mockup');
-      name_of_mockups.innerHTML = data.name_of_mockup;
-      var comment = document.getElementById('comment');
-      comment.innerHTML = data.comment;
+      name_of_mockups.innerHTML = name;
       }
 
-      var load_data = function (name, id) {
+    var set_mockup_comment = function(text) {
+      var comment = document.getElementById('comment');
+      comment.innerHTML = text;
+    }
 
+      var load_data = function (data) {
+        var element = document.getElementById('data')
       }
     </script>
 
