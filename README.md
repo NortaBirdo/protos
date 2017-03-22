@@ -21,5 +21,16 @@ For achievement the best result of work I highly recommend to use Git.
 1. Change ``` comment``` variable in ```data``` structure to real comment or stay empty
 1. Make mockup use HTML and CSS. The gulp automatically rebuild files for each saves and put in in build folder under the same name.
 
+See examples for more details.
+
+## How to Use Fake Data
+1. Create js file in ```src/js``` folder.
+1. Create object with your fake data. Object must be flat (doesn't contain subobject). Name of object must be unique
+1. In your mockup create id for dives (or other object where you want to put your data). Id must be unique for this page and their must be the same like object properties from step 1.
+1. To link file with fake data, which you have created on step 1. For example: ```<script type="text/javascript" src="./js/patient.js"></script>``` where ```src=``` contains path to your file.
+1. Add in existing script call ```load_data(object_name)``` function. ```object_name``` is name of object with fake data from linked file. The place is marked by commet ```// if your want to link fake data put call of load_data(object_name) here.```
+
+Your can see example in ```dialog_example.html``` in ```example``` folder
+
 # Plans
 I'm working on template of components and their CSS. Also I will make more details about structure of project

@@ -38,7 +38,7 @@
 
             </div>
           </div>
-        </div> <!-- end of column-->
+        </div> <!-- end of column -->
 
         <div class="column">
           <div class="row">
@@ -63,12 +63,15 @@
 
 //= ../components/footer.html
 
-<script type="text/javascript">
-  var data = {
-    name_of_mockup: '',  //Change the name of mockups
-    comment: `` //Change the comment or stay empty
-  }
+<script type="text/javascript" src="./js/patient.js"></script>
 
-  setdata(data);
+<script type="text/javascript">
+  set_mockup_name('Card of patient mockup');//Change the name of mockups
+  set_mockup_comment(`
+    There is your <br>
+    comment.
+    `)//Change the comment or stay empty
+
+  load_data(patient);
 
 </script>

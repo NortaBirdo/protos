@@ -17,7 +17,11 @@
     }
 
       var load_data = function (data) {
-        var element = document.getElementById('data')
+        for (key in data) {
+          var element = document.getElementById(key);
+          element.innerHTML = data[key]
+        }
+
       }
     </script>
 
