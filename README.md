@@ -20,7 +20,9 @@ For achievement the best result of work I highly recommend to use Git.
 1. Change empty parameter of  ```set_mockup_name``` function to name of your mockup
 1. Change empty parameter of ``` set_mockup_comment``` function to text of your comment of sty one empty
 1. Make mockup use HTML and CSS. The gulp automatically rebuild files for each saves and put in in build folder under the same name.
+1. If you need to link custom CSS you have to use ```link_css(path)``` function. There is ```path``` it is path to CSS file.
 1. Your can use unique source of fake data. Link it if it is necessary (see instruction below).
+
 
 See examples for more details.
 

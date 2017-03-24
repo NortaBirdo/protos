@@ -23,6 +23,15 @@
         }
 
       }
+
+      var link_css = function (path) {
+        var link = document.createElement('link');
+        link.setAttribute('rel', 'stylesheet');
+        link.setAttribute('href', path);              
+
+        document.head.appendChild(link);
+
+      }
     </script>
 
   </head>
